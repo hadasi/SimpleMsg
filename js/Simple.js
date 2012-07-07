@@ -1,14 +1,4 @@
-﻿var Simple = (function(module) {
-
-	module.Now = function(resultObject) {
-		resultObject.html('<br />' + GetDate() + '<br /><br /><br />　　' + GetComment());
-	};
-
-	return module;
-} (Simple || {}));
-
-
-function GetDate()
+﻿function GetDate()
 {
 	var weeks = new Array('日', '月', '火', '水', '木', '金', '土');
 

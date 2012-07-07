@@ -15,16 +15,18 @@ body {
 }
 </style>
 
-</head>
-<boby>
-	<button id="msgBtn">いまの感じ</button>
-	<div id="msgArea"></div>
-</boby>
-
 <script>
-$('#msgBtn').click(function() {
-	Simple.Now($('#msgArea'));
-});
+function Draw()
+{
+	var resultText = GetDate() + '<br /><br /><br />　　' + GetComment();
+	document.getElementById("msgArea").innerHTML = resultText;
+}
 </script>
 
+</head>
+<boby>
+    <input type=button value="いまの感じ" onClick=Draw()>
+	<br />
+	<div id="msgArea"></div>
+</boby>
 </html>
