@@ -1,32 +1,22 @@
-﻿<!doctype html>
-
-<html lang="ja">
+<!doctype html>
+<html>
 <head>
- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <meta http-equiv="Content-Style-Type" content="text/css">
- <script src="js/zepto.min.js"></script>
- <script src="js/simple.js"></script>
-<title>Simple Message</title>
-
-<style type="text/css">
-body {
-	background-color:#433221;
-	color:#FEEDDC;
-}
-</style>
-
-<script>
-function Draw()
-{
-	var resultText = GetDate() + '<br /><br /><br />　　' + GetComment();
-	document.getElementById("msgArea").innerHTML = resultText;
-}
-</script>
-
+	<title>Simple Message</title>
 </head>
 <boby>
-    <input type=button value="いまの感じ" onClick=Draw()>
-	<br />
+	<button id="msgBtn">Now</button>
+	<button id="clearBtn">Clear</button>
 	<div id="msgArea"></div>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/simple.js"></script>
+<script>
+$('#msgBtn').click(function() {
+	Simple.Now($('#msgArea'));
+});
+$('#clearBtn').click(function() {
+	$('#msgArea').html('');
+});
+</script>
 </boby>
 </html>
