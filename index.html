@@ -46,8 +46,8 @@ body {
 	function Draw() {
 		var element = document.getElementById('msgArea');
 
-//		var resultText = GetDate() + '<br /><br /><br />　　' + GetComment();
-		var resultText = GetDate2();
+		var resultText = GetDate2() + '<br /><br /><br />　　' + GetComment2();
+//		var resultText = GetDate2();
 
 		element.innerHTML = resultText;
 	}
@@ -82,6 +82,19 @@ function GetDate2()
     //. フォームを整形します
     return year + "/" + month + "/" + date + " (" + week + ") " + hour + ":" + minute + "." + second;
 };
+
+function GetComment2()
+{
+	//. かお
+	var kao = new Array("(´-`)", "(o^^)o", "(´3`)", "(^・^)", "(^o^ゞ", "(-.-)", "( ^^)/", "o(^v^)o", "(^-^)", "(#^.^#)");
+	//. コメント
+	var com = new Array("ふぬ～", "おほっ", "ぽょ", "もふっ", "ナハッ", "あいゃ", "ほぃ～", "ぐふふ", "うふっ", "てへっ");
+
+	//. 0～9 の乱数を取得
+	var Rnd = Math.floor(Math.random() * 10);
+
+	return "<span style='font-size:200%;'>" + kao[Rnd] + "</span>　" + com[Rnd];
+}
 
 </script>
 
