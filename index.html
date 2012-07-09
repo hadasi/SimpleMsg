@@ -46,10 +46,42 @@ body {
 	function Draw() {
 		var element = document.getElementById('msgArea');
 
-		var resultText = GetDate() + '<br /><br /><br />　　' + GetComment();
+//		var resultText = GetDate() + '<br /><br /><br />　　' + GetComment();
+		var resultText = GetDate2();
 
 		element.innerHTML = resultText;
 	}
+
+function GetDate2()
+{
+	var weeks = new Array('日', '月', '火', '水', '木', '金', '土');
+
+	//. 日付の取得
+	var dt = new Date();
+	//. 日付の分離
+	var year   = dt.getFullYear();
+	var month  = dt.getMonth() + 1;
+	var date   = dt.getDate();
+	var week   = weeks[dt.getDay()];
+	var hour   = dt.getHours();
+	var minute = dt.getMinutes();
+	var second = dt.getSeconds();
+
+	//. 1桁のとき「0」を付けて2桁にします
+	if (month < 10)
+	{	month = "0" + month;   }
+	if (date < 10)
+	{	date = "0" + date;   }
+	if (hour < 10)
+	{	hour = "0" + hour;   }
+	if (minute < 10)
+	{	minute = "0" + minute;   }
+	if (second < 10)
+	{	second = "0" + second;   }
+
+    //. フォームを整形します
+    return year + "/" + month + "/" + date + " (" + week + ") " + hour + ":" + minute + "." + second;
+};
 
 </script>
 
