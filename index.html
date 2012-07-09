@@ -1,22 +1,63 @@
-<!doctype html>
-<html>
-<head>
-	<title>Simple Message</title>
-</head>
-<boby>
-	<button id="msgBtn">Now</button>
-	<button id="clearBtn">Clear</button>
-	<div id="msgArea"></div>
+﻿<!doctype html>
 
-<script src="js/zepto.min.js"></script>
-<script src="js/simple.js"></script>
-<script>
-$('#msgBtn').click(function() {
-	Simple.Now($('#msgArea'));
-});
-$('#clearBtn').click(function() {
-	$('#msgArea').html('');
-});
+<html lang="ja">
+<head>
+ <meta charset=UTF-8">
+ <meta http-equiv="Content-Style-Type" content="text/css">
+ <!-- 外部スクリプト -->
+ <!--script type="text/javascript" src="js/zepto.min.js"></script>
+ <script type="text/javascript" src="js/simple.js"></script-->
+ <script type="text/javascript" src="phonegap.js"></script>
+ <!--script type="text/javascript" src="js/simple.js"></script-->
+<title>Simple Message</title>
+
+<style type="text/css">
+body {
+	background-color:#433221;
+	color:#FEEDDC;
+}
+</style>
+
+<script type="text/javascript">
+
+	// PhoneGapの読み込み完了とともにonDeviceReadyを呼び出します。
+	//
+	// この時点ではドキュメントの読み込みは完了していますが、
+	// PhoneGapの読み込みはまだ完了していません。
+	// PhoneGapが読み込み完了とともに deviceready() イベントが呼び出されます。
+	//
+	function onLoad() {
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+
+	// PhoneGapの読み込みが完了したので、
+	// PhoneGapのメソッドを安全に呼び出すことができます。
+	//
+	function onDeviceReady() {
+		// PhoneGap APIを安全に使用できます。
+
+/*
+		var element = document.getElementById('msgArea');
+
+		element.innerHTML = 'デバイス名: '       + device.name     + '<br />' +                             'PhoneGap: '         + device.phonegap  + '<br />' +                            'Cordova: '          + device.cordova  + '<br />' +                             'プラットフォーム: ' + device.platform + '<br />' +                             'UUID: '             + device.uuid     + '<br />' +                             'バージョン: '       + device.version  + '<br />';
+*/
+	}
+
+	function Draw() {
+		var element = document.getElementById('msgArea');
+
+		element.innerHTML = '(∵) ヒョコ';
+	}
+
 </script>
-</boby>
+
+</head>
+<body onload="onLoad()">
+
+<input type="button" value="いまの感じ" onClick="Draw()" />
+<br />
+
+<div id="msgArea"></div>
+
+</body>
 </html>
