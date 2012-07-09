@@ -8,7 +8,7 @@
  <!--script type="text/javascript" src="js/zepto.min.js"></script>
  <script type="text/javascript" src="js/simple.js"></script-->
  <script type="text/javascript" src="phonegap.js"></script>
- <!--script type="text/javascript" src="js/simple.js"></script-->
+ <script type="text/javascript" src="js/simple.js"></script>
 <title>Simple Message</title>
 
 <style type="text/css">
@@ -46,7 +46,9 @@ body {
 	function Draw() {
 		var element = document.getElementById('msgArea');
 
-		element.innerHTML = '(∵) ヒョコ';
+		var resultText = GetDate() + '<br /><br /><br />　　' + GetComment();
+
+		element.innerHTML = resultText;
 	}
 
 </script>
