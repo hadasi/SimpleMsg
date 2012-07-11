@@ -50,6 +50,10 @@ body {
 //		var resultText = GetDate2();
 
 		element.innerHTML = resultText;
+
+
+		element = document.getElementById('firstImg');
+
 	}
 
 function GetDate2()
@@ -101,7 +105,7 @@ function GetComment2()
 </head>
 <body onload="onLoad()">
 
-<img src="Img/001.png">
+<img id="firstImg" style="position:absolute;" src="Img/001.png">
 
 <input type="button" value="いまの感じ" onClick="Draw()" />
 <br />
