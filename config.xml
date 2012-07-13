@@ -4,7 +4,7 @@
 	id		= "jp.co.jas_hadasi.simplemsg"
 	version 	= "1.0.0">
 
-	<name>Simple Mssage Sample App</name>
+	<name>FeelingNow</name>
 
 	<description>
 		This is a sample config.xml for integration testing with SimpleMsg
