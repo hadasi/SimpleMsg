@@ -1,6 +1,6 @@
 ﻿<!doctype html>
 
-<html lang="ja" manifest="AndroidManifest.xml">
+<html lang="ja" manifest="config.xml">
 <head>
  <meta charset=UTF-8">
  <meta http-equiv="Content-Style-Type" content="text/css">
@@ -13,9 +13,13 @@
 
 <style type="text/css">
 body {
+    margin:0px;
+    padding:0px;
 	background-color:#433221;
 	color:#FEEDDC;
+	background-image:url("Img/001.png");
 }
+
 </style>
 
 <script type="text/javascript">
@@ -43,16 +47,26 @@ body {
 */
 	}
 
+
+	var ImgNo = 1;
+
 	function Draw() {
 		var element = document.getElementById('msgArea');
 
-		var resultText = GetDate2() + '<br /><br /><br />　　' + GetComment2();
+		var resultText = '　' + GetDate2() + '<br /><br /><br />　　' + GetComment2();
 //		var resultText = GetDate2();
 
 		element.innerHTML = resultText;
 
 
-		element = document.getElementById('firstImg');
+
+		ImgNo++;
+		if (ImgNo > 3)
+		{	ImgNo = 1;   }
+		resultText = 'url("Img/00' + ImgNo + '.png")';
+//		element = document.getElementById('firstImg');
+		element = document.getElementById('bodyx');
+		element.style.backgroundImage = resultText;
 
 	}
 
@@ -103,9 +117,11 @@ function GetComment2()
 </script>
 
 </head>
-<body onload="onLoad()">
+<body id="bodyx" onload="onLoad()">
 
+<!--
 <img id="firstImg" style="position:absolute;" src="Img/001.png">
+-->
 
 <input type="button" value="いまの感じ" onClick="Draw()" />
 <br />
