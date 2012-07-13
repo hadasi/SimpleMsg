@@ -33,10 +33,10 @@
 
     <application
         android:icon="@drawable/ic_launcher"
-        android:label="@string/SimpleMsg" >
+        android:label="SimpleMsg" >
         <activity
             android:name=".simplemsg"
-            android:label="@stringm/SimpleMsg"
+            android:label="SimpleMsg"
             android:configChanges="orientation|keyboardHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
