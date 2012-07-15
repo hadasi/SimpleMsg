@@ -1,4 +1,4 @@
-﻿function GetDate()
+﻿function GetDateStr()
 {
 	var weeks = new Array('日', '月', '火', '水', '木', '金', '土');
 
@@ -27,7 +27,7 @@
 
     //. フォームを整形します
     return year + "/" + month + "/" + date + " (" + week + ") " + hour + ":" + minute + "." + second;
-};
+}
 
 function GetComment()
 {

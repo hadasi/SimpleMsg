@@ -55,7 +55,7 @@ body {
 	function Draw() {
 		var element = document.getElementById('msgArea');
 
-		var resultText = '　' + GetDate2() + '<br /><br /><br />　　' + GetComment2();
+		var resultText = '　' + GetDateStr() + '<br /><br /><br />　　' + GetComment2();
 //		var resultText = GetDate2();
 
 		element.innerHTML = resultText;
@@ -101,7 +101,7 @@ function GetDate2()
 
     //. フォームを整形します
     return year + "/" + month + "/" + date + " (" + week + ") " + hour + ":" + minute + "." + second;
-};
+}
 
 function GetComment2()
 {
@@ -129,6 +129,8 @@ function GetComment2()
 <br />
 
 <div id="msgArea"></div>
+
+<input type="button" style="position:absolute; left:200px top:460px;" value="Next >" onClick="Draw()" />
 
 </body>
 </html>
