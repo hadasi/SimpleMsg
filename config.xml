@@ -1,53 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>
+ï»¿<?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
   xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "jp.co.jas_hadasi.simplemsg"
-	version 	= "1.0.0">
-	<!-- ª‚Ì id ‚ÍƒAƒvƒŠŒÅ—LID (Ž©•ª‚ÌŒÅ—L–¼ + ƒvƒƒOƒ‰ƒ€–¼)
-		 ‚±‚ê‚Ì“¯‚¶ƒvƒƒOƒ‰ƒ€‚ª‚ ‚é‚ÆAƒCƒ“ƒXƒg[ƒ‹‚·‚é‚Æ‚«
-		 ã‘‚«‚Æ‚È‚è‚Ü‚· -->
+	version 	= "1.0.1">
+	<!-- â†‘ã® id ã¯ã‚¢ãƒ—ãƒªå›ºæœ‰ID (è‡ªåˆ†ã®å›ºæœ‰å + ãƒ—ãƒ­ã‚°ãƒ©ãƒ å)
+		 ã“ã‚Œã®åŒã˜ãƒ—ãƒ­ã‚°ãƒ©ãƒ ãŒã‚ã‚‹ã¨ã€ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã¨ã
+		 ä¸Šæ›¸ãã¨ãªã‚Šã¾ã™ -->
 
-	<!-- ƒAƒvƒŠƒP[ƒVƒ‡ƒ“•\Ž¦–¼
-		 Github ‚â android ’[––‚Å•\Ž¦‚³‚ê‚é–¼Ì‚Å‚·
-		 (ŽŽ‚µ‚Ä‚È‚¢‚¯‚Ç“ú–{Œê‚à OK?) -->
+	<!-- ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³è¡¨ç¤ºå
+		 Github ã‚„ android ç«¯æœ«ã§è¡¨ç¤ºã•ã‚Œã‚‹åç§°ã§ã™
+		 (è©¦ã—ã¦ãªã„ã‘ã©æ—¥æœ¬èªžã‚‚ OK?) -->
 	<name>FeelingNow</name>
 
-	<!-- à–¾•¶ -->
+	<!-- èª¬æ˜Žæ–‡ -->
 	<description>
 		This is a sample config.xml for integration testing with SimpleMsg
 	</description>
 
-	<!-- ‚È‚­‚Ä‚à OK ‚¾‚¯‚ÇA‚±‚ÌƒvƒƒOƒ‰ƒ€‚Ìƒ‰ƒCƒZƒ“ƒX -->
+	<!-- ãªãã¦ã‚‚ OK ã ã‘ã©ã€ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ -->
 	<license href="http://www.opensource.org/licenses/mit-license.php">
 		The MIT License.
 	</license>
 
-	<!-- ìŽÒ (ƒƒ^ƒV) ‚Ìî•ñ EE ‚¢‚¢‚©‚°‚ñƒfƒXB(^o^U -->
+	<!-- ä½œè€… (ãƒ¯ã‚¿ã‚·) ã®æƒ…å ± ãƒ»ãƒ» ã„ã„ã‹ã’ã‚“ãƒ‡ã‚¹ã€‚(^o^ã‚ž -->
 	<author href="http://hadasi.com"
 		email="hadai@mail.com">
 		Hadasi
 	</author>
 
-	<!-- ‚±‚ê‚Í—pˆÓ‚µ‚½‚¢‚Å‚·ƒl EE ƒAƒCƒRƒ“‚Å‚µ‚å‚¤ -->
+	<!-- ã“ã‚Œã¯ç”¨æ„ã—ãŸã„ã§ã™ãƒ ãƒ»ãƒ» ã‚¢ã‚¤ã‚³ãƒ³ã§ã—ã‚‡ã† -->
 	<icon src="Img/icon.png" height="150" width="200" />
 
-	<!-- ‚±‚ê‚Í–³‚­‚Ä‚à‚æ‚¢‚æ‚¤‚Å‚·ƒl EE ‹N“®Žž‚Ì‰æ‘œ‚ÆŽv‚í‚ê‚Ü‚· -->
+	<!-- ã“ã‚Œã¯ç„¡ãã¦ã‚‚ã‚ˆã„ã‚ˆã†ã§ã™ãƒ ãƒ»ãƒ» èµ·å‹•æ™‚ã®ç”»åƒã¨æ€ã‚ã‚Œã¾ã™ -->
 	<gap:splash src="mainsplash.png" height="480" width="360" />
 
-	<!-- upreference = —DæŒ v‚È‚ñ‚¾‚ë‚©‚Ÿ -->
+	<!-- ã€Œpreference = å„ªå…ˆæ¨©ã€ãªã‚“ã ã‚ã‹ã -->
 	<preference name="universal" value="true"/>
 	<preference name="phonegap-version" value="1.3.0"/>
 
-	<!-- Žg—p‚·‚é phonegap ‚Ì API ‚¾‚ÆŽv‚¤ -->
+	<!-- ä½¿ç”¨ã™ã‚‹ phonegap ã® API ã§ã—ã‚‡ã†
+		 (ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã¨ãã€ã“ã®ã‚¢ãƒ—ãƒªãŒ
+		 ä½•ã‚’å‚ç…§ã™ã‚‹ã‹ãƒ¦ãƒ¼ã‚¶ãƒ¼ã«çŸ¥ã‚‰ã›ã¾ã™) -->
 	<feature name="http://api.phonegap.com/1.0/geolocation" required="true"/>
 	<feature name="http://api.phonegap.com/1.0/camera" required="true"/>
 	<feature name="http://api.phonegap.com/1.0/notification" required="true"/>
 
-	<!-- –³‚­‚Ä‚à‚æ‚³‚°‚¾‚¯‚Ç EE ‚È‚ñ‚¾‚ë‚£
+	<!-- ç„¡ãã¦ã‚‚ã‚ˆã•ã’ã ã‘ã© ãƒ»ãƒ» ãªã‚“ã ã‚ã…
   		 <access origin="http://127.0.0.1*"/>
   		 <access origin="http://devgeeks.org"/>
   		 <access origin="http://*.phonegap.com"/>
-		 ‚±‚ñ‚ÈŠ´‚¶‚ÅA‰½ƒ–Š‚àŽw’è‚µ‚Ä OK ‚Ì‚æ‚¤‚Å‚·B
+		 ã“ã‚“ãªæ„Ÿã˜ã§ã€ä½•ãƒ¶æ‰€ã‚‚æŒ‡å®šã—ã¦ OK ã®ã‚ˆã†ã§ã™ã€‚
 	-->
 	<access origin="*" />
 </widget>
